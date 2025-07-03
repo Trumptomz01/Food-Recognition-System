@@ -44,8 +44,8 @@ Thumbs.db
 .ipynb_checkpoints
 
 # Machine Learning Models and Data
-model/
-*.h5
+# model/
+# *.h5
 *.pkl
 *.joblib
 *.model

@@ -54,6 +54,6 @@ model.fit(train_generator, epochs=EPOCHS, validation_data=test_generator)
 # Save model
 import os
 os.makedirs("model", exist_ok=True)
-model.save("model/model.keras", save_format="keras")
-print("✅ Model saved to model/model.keras")
+model.save("model/")  # this creates model/keras_metadata.pb and variables/
+print("✅ Model saved to model/")
 
