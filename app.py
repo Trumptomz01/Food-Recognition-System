@@ -22,7 +22,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # --- Load both models ---
 # Try loading the custom model as a SavedModel directory first, fallback to .h5 if needed
 try:
-   custom_model = tf.keras.models.load_model("model/")
+   custom_model = tf.keras.models.load_model("model/model.keras")
 except (IOError, OSError):
    custom_model = tf.keras.models.load_model("model/model.keras")
 
