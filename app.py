@@ -20,8 +20,13 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # --- Load both models ---
-custom_model = tf.keras.models.load_model("model/model.keras")
-imagenet_model = MobileNetV2(weights="imagenet")              # default MobileNetV2
+# Try loading the custom model as a SavedModel directory first, fallback to .h5 if needed
+try:
+   custom_model = tf.keras.models.load_model("model/")
+except (IOError, OSError):
+   custom_model = tf.keras.models.load_model("model/model.keras")
+
+imagenet_model = MobileNetV2(weights="imagenet")
 
 # --- Your 5 custom food classes ---
 CONFIDENCE_THRESHOLD = 0.90  
