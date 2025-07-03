@@ -20,7 +20,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # --- Load both models ---
-custom_model = tf.keras.models.load_model("model/")
+custom_model = tf.keras.models.load_model("model/model.keras")
 imagenet_model = MobileNetV2(weights="imagenet")              # default MobileNetV2
 
 # --- Your 5 custom food classes ---
