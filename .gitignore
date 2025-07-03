@@ -1,0 +1,133 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Machine Learning Models and Data
+model/
+*.h5
+*.pkl
+*.joblib
+*.model
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+checkpoints/
+logs/
+tensorboard_logs/
+wandb/
+
+# Training Data and Large Files
+data/
+datasets/
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Cache directories
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+config.json
+secrets.json
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.out
+*.err
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Images and media (if you don't want to track them)
+# Uncomment if you don't want to track image files
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.tiff
+# *.webp
+# *.svg
+# *.ico
+
+# Scraped data
+scraped_data/
+scraped_images/
+
+# Google Drive or cloud sync files
+.gdriverc
+.gdrive/
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+
+# Local configuration files
+local_config.py
+local_settings.py
