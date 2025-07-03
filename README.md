@@ -1,6 +1,6 @@
 # Food Recognition System
 
-A robust food recognition system that uses a custom-trained deep learning model to identify food items from images. The project integrates advanced neural networks with a .NET backend for smooth deployment and real-time predictions.
+A robust food recognition system that uses a custom-trained MobileNetV2 deep learning model to identify food items from images. The project integrates advanced neural networks with a backend for smooth deployment and real-time predictions.
 
 ## Features
 
@@ -19,7 +19,7 @@ A robust food recognition system that uses a custom-trained deep learning model 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/food-recognition-system.git
+   git clone https://github.com/Trumptomz01/food-recognition-system.git
    ```
 2. **Install Dependencies:**  
    Ensure you have Python (for model) and .NET installed.  
