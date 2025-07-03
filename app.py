@@ -22,9 +22,16 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # --- Load both models ---
 import os
 
-model_path = os.path.join(os.path.dirname(__file__), "model", "model.keras")
-custom_model = tf.keras.models.load_model(model_path)
-imagenet_model = MobileNetV2(weights="imagenet")              # default MobileNetV2
+# Try loading the custom model, handle errors gracefully
+try:
+   model_path = os.path.join(os.path.dirname(__file__), "model", "model.keras")
+   custom_model = tf.keras.models.load_model(model_path)
+except Exception as e:
+   st.error(f"Failed to load custom model: {e}")
+   st.stop()
+
+# Load ImageNet model for fallback
+imagenet_model = MobileNetV2(weights="imagenet")
 
 # --- Your 5 custom food classes ---
 CONFIDENCE_THRESHOLD = 0.90  
@@ -91,5 +98,5 @@ if uploaded_file is not None:
       label_imagenet, confidence_imagenet = decode_predictions(preds_mobilenet, top=1)[0][0][1:]
 
       st.warning("❗ Low confidence from custom model. Using fallback:")
-      st.info(f"🔍 Alternative Prediction: **{label_imagenet}** ({confidence_imagenet * 100:.2f}%)")
       st.info(f"🧠 Custom Model Guess: **{label_custom}** ({conf_custom * 100:.2f}%)")
+      st.info(f"🔍 Alternative Prediction: **{label_imagenet}** ({confidence_imagenet * 100:.2f}%)")
